@@ -1,5 +1,5 @@
 # llama3.1-telethon
-llama3.1 8B ai on telethon telegram robot
+llama3.1 8B ai on telethon telegram robot without hf token
 
 
 Note that this robot also works with `cpu` and has been tested and has no problems.
