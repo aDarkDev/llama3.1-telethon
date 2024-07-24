@@ -39,8 +39,9 @@ async def mainhandler(event):
     elif event.text == "/clear":
         Llama3_1_8b.database[user_id] = []
         await event.respond("Your chats cleared from ai memory.")
-    a1 = await event.respond("Wait...")
-    result = Llama3_1_8b.answer(user_id,event.text)
-    await a1.edit(result)    
+    else:
+        a1 = await event.respond("Wait...")
+        result = Llama3_1_8b.answer(user_id,event.text)
+        await a1.edit(result)    
 
 client.run_until_disconnected()
