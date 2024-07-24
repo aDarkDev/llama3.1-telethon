@@ -36,6 +36,9 @@ async def mainhandler(event):
     user_id = event.sender_id
     if event.text == "/start":
         await event.respond("welcome to llama3.1 8b bot.\n\nBy github.com/aDarkDev")
+    elif event.text == "/clear":
+        Llama3_1_8b.database[user_id] = []
+        await event.respond("Your chats cleared from ai memory.")
     a1 = await event.respond("Wait...")
     result = Llama3_1_8b.answer(user_id,event.text)
     await a1.edit(result)    
